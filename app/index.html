@@ -6,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Starter Files and Tooling Setup!</title>
 
-  <!-- build:css css/main.css.min -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link href="css/main.css" type="text/css" rel="stylesheet" />
-  <!-- endbuild -->
 
 </head>
 
@@ -17,41 +16,346 @@
   <div class="container">
 
     <div class="navbar">
-      <div class="navbar__container">
+      <div class="navbar__container--top">
+        <div class="navbar__top">
+          <a href="#">About us</a>
+          <a href="#">Contact us</a>
+          <a href="#" class="navbar__item--pipe-after">Register or Log in</a>
+          <a href="#"><!-- Come back to this and add an icon here --> Basket (<span class="navbar__item-cart-quantity"> 4 </span>) <span class="navbar__item-cart-total">£3.989,99</span></a>
+        </div>
+      </div>
+      <div class="navbar__container uppercase">
         <div class="navbar__left">
-          <a href="#">LOGO</a>
+          <a href="/"><img src="images/iweb-logo.svg" alt="iWeb Logo" class="navbar__logo" /></a>
+        </div>
+        <div class="navbar__center">
+          <a href="/">Services</a>
+          <a href="/">Portfolio</a>
+          <a href="/">Why Us?</a>
+          <a href="/" class="navbar__item--pipe-after">Resources</a>
+          <a href="/">Search</a>
         </div>
         <div class="navbar__right">
-          <a href="#">Home</a>
-          <a href="#">Products</a>
-          <a href="#">Services</a>
-          <a href="#">Contact</a>
+          <a href="tel:01617270250">Need Help? <span class="navbar__phone-number">0161 727 0250</span></a>
         </div>
       </div>
     </div>
 
-    <div class="header">
+    <div class="header" style="text-align: center">
+      <div class="header-grid">
+
+        <div class="header__left-content">
+          <img src="images/scruffs-logo.png" style="max-height: 80px; padding-left: 2em" />
+          <p class="header__case-study-text"><a href="#" class="header__case-study-link--no-ul">View Case Study</a></p>
+          <p class="header__case-study-text"><a href="#" class="header__case-study-link">Scruffs Hardwear</a></p>
+        </div>
+
+        <div class="header__main-content">
+          <h1 class="header__title">Industry Leading <br /><span style="font-weight: bold">Magento 2 eCommerce</span> Agency.</h1>
+          <p class="header__follow-up-text">For over 22 years we've helped hundreds of businesses deliver their online objectives.</p>
+
+          <img src="images/scruffs-shoe.png" class="header__main-image" />
+
+          <div class="header__btn-container">
+            <p class="header__btn-arrow"><</p>
+            <p class="header__btn-arrow">></p>
+          </div>
+
+        </div>
+
+        <div class="header__right-content">
+          <img src="images/magento-partner.png" style="max-height: 170px; padding-right: 2em" />
+        </div>
+
+      </div>
+    </div>
+
+    <div class="start-order">
+      <p class="start-order__text"><span class="bold">Start</span><br /> your order</p>
+      <select class="start-order__dropdown">
+        <option value="Please select">Please select</option>
+      </select>
+      <select class="start-order__dropdown">
+        <option value="Please select">Please select</option>
+      </select>
+      <div>
+        <input type="text" placeholder="Width" class="start-order__input "/>
+      </div>
+      <div>
+        <input type="text" placeholder="Height" class="start-order__input "/>
+      </div>
+      <a href="" class="start-order__button">S</a>
+    </div>
+
+    <div class="features">
+      <div class="feature__box">
+        <p class="feature__title">Fast and Efficient</p>
+        <p class="feature__text">Next day UK delivery</p>
+      </div>
+      <div class="feature__box">
+        <p class="feature__title">Knowledge and Experience</p>
+        <p class="feature__text">Expert technical support</p>
+      </div>
+      <div class="feature__box">
+        <p class="feature__title">Click and Collect</p>
+        <p class="feature__text">Collect in just 20 minutes</p>
+      </div>
+    </div>
+
+    <div class="applications">
+
+      <h2 class="section__header uppercase">Applications</h2>
+      <p class="section__follow-up-text">Sed quis interdum purus, nec porttitor odio. Etiam nec eleifend sem, et gravida ligula. Donec ac lorem augue.</p>
+
+      <div class="applications-grid">
+        <div class="application__section-1">
+          <img src="http://via.placeholder.com/100x100" class="application__image" />
+          <h3 class="application__title">Oil &amp Gas</h3>
+          <p class="application__text"><a href="#">More info</a></p>
+        </div>
+
+        <div class="application__section-2">
+          <img src="http://via.placeholder.com/100x100" class="application__image" />
+          <h3 class="application__title">Food &amp Beverage</h3>
+          <p class="application__text"><a href="#">More info</a></p>
+        </div>
+
+        <div class="application__section-3">
+          <img src="http://via.placeholder.com/100x100" class="application__image" />
+          <h3 class="application__title">Medical</h3>
+          <p class="application__text"><a href="#">More info</a></p>
+        </div>
+
+        <div class="application__section-4">
+          <img src="http://via.placeholder.com/100x100" class="application__image" />
+          <h3 class="application__title">Aerospace</h3>
+          <p class="application__text"><a href="#">More info</a></p>
+        </div>
+
+        <div class="application__section-5">
+          <img src="http://via.placeholder.com/100x100" class="application__image" />
+          <h3 class="application__title">Construction</h3>
+          <p class="application__text"><a href="#">More info</a></p>
+        </div>
+
+        <div class="application__section-6">
+          <img src="http://via.placeholder.com/100x100" class="application__image" />
+          <h3 class="application__title">Material Handling</h3>
+          <p class="application__text"><a href="#">More info</a></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="portfolio">
+      <h2 class="section__header uppercase">Our Portfolio</h2>
+      <p class="section__follow-up-text">Take a look at some of our most recent work.</p>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-grid__raleigh-section">
+          <div class="portfolio-grid__caption-area">
+            <h4 class="portfolio-grid__title">Raleigh</h4>
+            <p class="portfolio-grid__text">One of the world's most iconic and best-known bike brands</p>
+            <a href="#" class="cta-button--orange">Learn more</a>
+          </div>
+        </div>
+        <div class="portfolio-grid__bhf-section">
+          <div class="portfolio-grid__caption-area">
+            <h4 class="portfolio-grid__title--smaller">British Heart Foundation</h4>
+            <p class="portfolio-grid__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <a href="#" class="cta-button--orange">Learn more</a>
+          </div>
+        </div>
+        <div class="portfolio-grid__my-memory-section">
+          <div class="portfolio-grid__caption-area">
+            <h4 class="portfolio-grid__title--smaller">My Memory</h4>
+            <p class="portfolio-grid__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <a href="#" class="cta-button--orange">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="products">
+      
+      <h2 class="section__header uppercase">Shop Products</h2>
+      <p class="section__follow-up-text">Sed quis interdum purus, nec porttitor odio. Etiam nec eleifend sem, et gravida ligula. Donec ac lorem augue.</p>
+
+      <div class="products-tab-grid">
+        <div class="product__tab-1 product__tab--active">
+          <p class="product__tab-title">Tab 1</p>
+        </div>
+        <div class="product__tab-2">
+          <p class="product__tab-title">Tab 2</p>
+        </div>
+        <div class="product__tab-3">
+          <p class="product__tab-title">Tab 3</p>
+        </div>
+        <div class="product__tab-4">
+          <p class="product__tab-title">Tab 4</p>
+        </div>
+      </div>
+
+      <div class="products-grid">
+        <div class="product__card-1">
+          <img src="https://images.philips.com/is/image/PhilipsConsumer/SHB3185BK_00-IMS-en_GB?wid=494&hei=435&$pnglarge$" class="product__image" />
+        </div>
+        <div class="product__card-info-1">
+          <p>Product Name<br />
+            <span class="product__card-category">Category</span>
+          </p>
+          <p class="product__card-from">from <span class="product__card-price">£6.99</span></p>
+        </div>
+        <div class="product__card-2">
+          <img src="https://images.philips.com/is/image/PhilipsConsumer/SHB3185BK_00-IMS-en_GB?wid=494&hei=435&$pnglarge$" class="product__image" />
+        </div>
+        <div class="product__card-info-2">
+         <p>Product Name<br />
+            <span class="product__card-category">Category</span>
+          </p>
+          <p class="product__card-from">from <span class="product__card-price">£3.50</span></p>
+        </div>
+        <div class="product__card-3">
+          <img src="https://images.philips.com/is/image/PhilipsConsumer/SHB3185BK_00-IMS-en_GB?wid=494&hei=435&$pnglarge$" class="product__image" />
+        </div>
+        <div class="product__card-info-3">
+         <p>Product Name<br />
+            <span class="product__card-category">Category</span>
+          </p>
+          <p class="product__card-from">from <span class="product__card-price">£2.68</span></p>
+        </div>
+      </div>
+
+      <div class="product__card-options">
+        <p class="circle"></p><p class="circle"></p><p class="circle"></p><p class="circle circle--active"></p><p class="circle"></p>
+      </div>
 
     </div>
 
-    <div class="feature1">
+    <div class="news">
+      <div class="news-grid">
+        <div class="news__latest-news">
+          <h4 class="news__header uppercase">Latest News</h4>
 
+          <h5 class="news__header-secondary">New title here</h5>
+          <p class="news__news-snippet">Sed quis interdum purus, nec porttitor odio. Etiam nec eleifend sem, et gravida ligula. Donec ac lorem augue. Vestibulum bibendum diam pretium quam sodales pulvinar.</p>
+          <a href="#" class="news__more-info">More info</a>
+
+        </div>
+        <div class="news__other-news">
+          <h4 class="news__header uppercase">We're Magento Certified</h4>
+
+            <div class="news__other-news-section">
+              <img src="http://via.placeholder.com/65x115" class="news__magento-image" />
+
+              <p class="news__news-snippet">Sed quis interdum purus, nec porttitor odio. Etiam nec eleifend sem, et gravida ligula. Donec ac lorem augue.<br /><br /><a href="#" class="news__more-info">Read More</a></p>
+            </div>
+
+            <div class="news__btn-container">
+              <p class="news__btn-arrow"><</p>
+              <p class="news__btn-arrow">></p>
+            </div>
+
+        </div>
+      </div>
     </div>
-    <div class="feature2">
-
-    </div>
-    <div class="feature3">
-
-    </div>
-    <div class="feature4">
-
-    </div>
-
-    <div class="main">
-
-    </div>
+    
 
     <div class="footer">
+      <div class="footer-grid">
+        
+        <div class="footer-column">
+          <h5 class="footer__title uppercase">We are Secure</h5>
+  
+          <div class="footer__payment-types">
+            <div class="footer__payment-type">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MasterCard_logo.png/640px-MasterCard_logo.png" class="footer__payment-type-image" />
+            </div>
+            <div class="footer__payment-type">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Maestro_logo.png" class="footer__payment-type-image" />
+            </div>
+            <div class="footer__payment-type">
+              <img src="http://www.oplata.com/static/v1/img/logos/verified-by-visa.png" class="footer__payment-type-image" />
+            </div>
+            <div class="footer__payment-type">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" class="footer__payment-type-image" />
+            </div>
+            <div class="footer__payment-type">
+              <img src="http://pngimg.com/uploads/paypal/paypal_PNG23.png" class="footer__payment-type-image" />
+            </div>
+            <div class="footer__payment-type">
+              <img src="http://pngimg.com/uploads/paypal/paypal_PNG23.png" class="footer__payment-type-image" />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5 class="footer__title uppercase">About</h5>
+
+          <ul class="footer__menu">
+            <li>About Us</li>
+            <li>Blog</li>
+            <li>Affiliates</li>
+            <li>Security &amp privacy</li>
+            <li>Cookies</li>
+            <li>Terms &amp conditions</li>
+            <li>Sitemap</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-column">
+          <h5 class="footer__title uppercase">Customer Service</h5>
+
+          <ul class="footer__menu">
+            <li>Contact us</li>
+            <li>Login/Register</li>
+            <li>Order Status</li>
+            <li>Help</li>
+            <li>Delivery</li>
+            <li>Returns</li>
+            <li>Open chat in new window</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-column">
+          <h5 class="footer__title uppercase">Contact Info</h5>
+
+          <ul class="footer__menu">
+            <li>t: <a href="#" class="footer__telephone">01785 876354</a></li>
+            <li>e: <a href="#" class="footer__email">hello@iweb.co.uk</a></li>
+          </ul>
+
+        </div>
+
+        <div class="footer__social-icons">
+        <div class="footer__social-icon-container">
+          <img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png" class="footer__social-icon" />
+        </div>
+        <div class="footer__social-icon-container">
+          <img src="https://www.shareicon.net/data/2017/06/28/888050_logo_512x512.png" class="footer__social-icon" />
+        </div>
+        <div class="footer__social-icon-container">
+          <img src="http://www.bimserver.org/wp-content/uploads/sites/6/2016/06/YouTube-logo-play-icon-1210x423.png" class="footer__social-icon" />
+        </div>
+        <div class="footer__social-icon-container">
+          <img src="https://is2-ssl.mzstatic.com/image/thumb/Purple128/v4/5a/39/a4/5a39a493-bc53-d184-3a9b-e340fb44cbf2/logo_google_plus_color-1x_U007emarketing-85-220-0-5.png/1200x630bb.jpg" class="footer__social-icon" />
+        </div>
+        <div class="footer__social-icon-container">
+          <img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/04/App-Pinterest-icon-with-out-background.png" class="footer__social-icon" />
+        </div>
+        <div class="footer__social-icon-container">
+          <img src="https://www.seeklogo.net/wp-content/uploads/2016/05/instagram-icon-logo-vector-download.jpg" class="footer__social-icon" />
+        </div>
+
+        <p class="footer__copyright">&copy Copyright iWeb 2017</p>
+
+      </div>
+
+
+      </div>
+
 
     </div>
     

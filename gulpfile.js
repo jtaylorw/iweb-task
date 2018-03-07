@@ -18,7 +18,7 @@ gulp.task('browserSync', function() { // Reg task set up syntax
 gulp.task('sass', function() {
 	return gulp.src('app/scss/**/*.scss') // Source files. All in app/scss and children directories
 		.pipe(sass()) // Converts SCSS to CSS
-		.pipe(gulp.dest('css')) // Which folder to place output file
+		.pipe(gulp.dest('app/css')) // Which folder to place output file
 		.pipe(browserSync.reload({ // Tell browserSync to reload webpage after sass is converted to css
 			stream: true // Don't put a semicolon here it breaks everything
 		}))

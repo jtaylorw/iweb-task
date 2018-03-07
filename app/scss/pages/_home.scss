@@ -1,1 +1,80 @@
-$light-grey = #EDEDED;
+.header {
+  grid-area: header;
+  background-color: $blue;
+  border-bottom: 3.4px solid $orange;
+  color: white;
+}
+
+.header-grid {
+	display: grid;
+	grid-template-columns: 20% 1fr 20%;
+	background-color: $blue;
+}
+
+.header__left-content {
+	align-self: flex-end;
+  justify-self: flex-start;
+}
+
+.header__right-content {
+	align-self: center;
+	justify-self: center;
+}
+
+.header__title {
+	font-size: 3em;
+	font-weight: normal;
+	padding-top: 1em;
+	margin-bottom: 0;
+}
+
+.header__follow-up-text {
+	margin-top: 20px;
+	font-size: 1.4em;
+	font-family: serif;
+}
+
+.header__case-study-link--no-ul { // no ul = no underline
+	text-decoration: none;
+	color: white;
+	font-size: 0.8em;
+}
+
+.header__case-study-link {
+	color: white;
+	font-size: 0.8em;
+}
+
+.header__case-study-text {
+	text-align: left;
+	padding-left: 2.8em;
+	margin-bottom: 0;
+	margin-top: 15px;
+	&:last-child {
+		margin-bottom: 30px;
+		margin-top: 0px;
+	}
+}
+
+.header__main-image {
+	max-width: 550px;
+}
+
+.header__btn-container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.header__btn-arrow {
+	color: orange;
+	background-color: white;
+	padding: 10px 15px 10px 15px;
+	margin-bottom: 2px;
+	font-size: 1.2em;
+	font-weight: bold;
+
+	&:first-child {
+		margin-right: 2px;
+	}
+
+}
