@@ -1,0 +1,68 @@
+.portfolio {
+  grid-area: portfolio;
+  background-color: $light-grey;
+}
+
+.portfolio-grid {
+	display: grid;
+	background-color: blue;
+	grid-template-columns: 1fr 1fr 1fr;
+	height: 700px;
+	max-width: $container-width;
+	margin: 0 auto;
+	margin-top: 3.5em;
+	margin-bottom: 4em;
+	grid-template-areas:
+		"raleigh-section raleigh-section bhf-section"
+		"raleigh-section raleigh-section my-memory-section"
+}
+
+.portfolio-grid__raleigh-section {
+	background-image: url(https://www.iweb.co.uk/wp-content/uploads/2017/05/ralieghcover-833x1000.jpg);
+	background-size: 100%;
+	grid-area: raleigh-section;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+.portfolio-grid__bhf-section {
+	background-image: url(https://www.iweb.co.uk/wp-content/uploads/2016/05/bhfcover-2.jpg);
+	background-size: 100%;
+	grid-area: bhf-section;
+	display: grid;
+	grid-template-columns: 0.7fr;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+.portfolio-grid__my-memory-section {
+	background-color: brown;
+	grid-area: my-memory-section;
+	display: grid;
+	grid-template-columns: 0.8fr;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+.portfolio-grid__caption-area {
+	background-color: white;
+	grid-row-start: end;
+	margin: 0 0 30px 30px;
+	padding: 20px;
+	padding-bottom: 30px;
+}
+
+.portfolio-grid__title {
+	font-size: 2em;
+	margin: 0;
+}
+
+.portfolio-grid__title--smaller {
+	font-size: 1.5em;
+	margin: 0;
+}
+
+.portfolio-grid__text {
+	font-size: 0.8em;
+	margin-top: 5px;
+	margin-bottom: 25px;
+}
