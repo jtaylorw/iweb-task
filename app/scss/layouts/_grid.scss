@@ -1,0 +1,49 @@
+// Start of grid code
+.container {
+  display: grid;
+  grid-template-areas:
+    "navbar navbar navbar navbar"
+    "header header header header"
+    "start-order start-order start-order start-order"
+    "features features features features"
+    "applications applications applications applications"
+    "portfolio portfolio portfolio portfolio"
+    "products products products products"
+    "news news news news"
+    "footer footer footer footer"
+}
+
+// Screens smaller than 980px...
+@media (max-width: 980px) {
+  .container {
+    grid-template-areas: 
+      "navbar navbar"
+      "header header"
+      "start-order start-order"
+      "features features"
+      "applications applications"
+      "portfolio portfolio"
+      "products products"
+      "news news"
+      "footer footer"
+  }
+}
+
+// Screens smaller than 650px...
+@media (max-width: 650px) {
+  .container {
+    grid-template-areas:
+      "navbar"
+      "header"
+      "start-order"
+      "features"
+      "applications"
+      "portfolio"
+      "products"
+      "news"
+      "footer"
+  }
+}
+
+
+// End of grid code
