@@ -1,0 +1,67 @@
+.applications {
+  grid-area: applications;
+}
+
+.applications-grid {
+	display: grid;
+	max-width: 1000px;
+	margin: 0 auto;
+	justify-items: center;
+	padding-top: 3em;
+	padding-bottom: 4em;
+	grid-row-gap: 30px;
+	grid-template-areas:
+  	"application__section-1 application__section-2 application__section-3"
+	"application__section-4 application__section-5 application__section-6"
+}
+
+.application__section-1 {
+	grid-area: application__section-1;
+	width: 300px;
+}
+
+.application__section-2 {
+	grid-area: application__section-2;
+	width: 300px;
+}
+
+.application__section-3 {
+	grid-area: application__section-3;
+	width: 300px;
+}
+
+.application__section-4 {
+	grid-area: application__section-4;
+	width: 300px;
+}
+
+.application__section-5 {
+	grid-area: application__section-5;
+	width: 300px;
+}
+
+.application__section-6{
+	grid-area: application__section-6;
+	width: 300px;
+}
+
+.application__image {
+	border-radius: 50%;
+	float: left;
+	margin-right: 20px;
+}
+
+.application__text {
+	margin-top: 0;
+	
+	a {
+		color: black;
+		font-size: 0.8em;
+	}
+
+}
+
+.application__title {
+	margin-bottom: 0;
+	padding-top: 10px;
+}
