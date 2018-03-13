@@ -58,7 +58,8 @@
 	border: solid 1px $grey;
 	height: 37px;
 	display: flex;
-  	@include align-justify-center;
+  	align-items: center;
+  	justify-content: center;
 }
 
 .footer__payment-type-image {
@@ -77,7 +78,8 @@
 	border: solid 1px $grey;
 	height: 37px;
 	display: flex;
-  	@include align-justify-center;
+  	align-items: center;
+  	justify-content: center;
 }
 
 .footer__social-icon {
@@ -146,7 +148,8 @@
 			border: solid 1px $grey;
 			height: 27px;
 			display: flex;
-		  	@include align-justify-center;
+		  	align-items: center;
+		  	justify-content: center;
 		}
 
 		.footer__payment-type-image {

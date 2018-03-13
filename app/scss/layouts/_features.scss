@@ -8,7 +8,8 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	max-width: $container-width;
-	@include align-justify-center;
+	align-items: center;
+	justify-content: center;
 	margin: 0 auto;
 	grid-template-areas:
 		"feature__box-1 feature__box-2 feature__box-3";
@@ -68,7 +69,8 @@
 		display: grid;
 		grid-template-columns: 0.5fr 1fr 0.5fr;
 		max-width: $container-width;
-		@include align-justify-center;
+		align-items: center;
+		justify-content: center;
 		margin: 0 auto;
 		grid-template-areas:
 			"feature__nav-arrow-left feature__box-1 feature__nav-arrow-right";
