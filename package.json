@@ -1,14 +1,29 @@
 {
   "name": "iweb",
   "version": "1.0.0",
-  "description": "iWeb PSD mockup to site task.",
-  "main": "index.js",
+  "description": "iWeb task, PSD to webpage",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jack Taylor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtaylorw/iweb-task.git"
+  },
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jtaylorw/iweb-task/issues"
+  },
+  "homepage": "https://github.com/jtaylorw/iweb-task#readme",
   "devDependencies": {
     "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.4"
   }
 }

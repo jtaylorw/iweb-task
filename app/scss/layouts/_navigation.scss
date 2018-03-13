@@ -1,0 +1,227 @@
+// Header navigation bar code starts here
+.navbar {
+  grid-area: navbar;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: $light-grey;
+  border-bottom: 3.4px solid $orange;
+}
+
+.navbar__collapse-btn-wrapper, .navbar__btn-wrapper, .sidenav {
+  display: none;
+}
+
+.navbar__container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.navbar__container--top {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: underline;
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center
+}
+
+.navbar__center {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+}
+
+.navbar a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 0 20px;
+  font: {
+    size: 0.9em;
+    weight: 500;
+  }
+}
+
+.navbar__top {
+  display: flex;
+  font-size: 0.9em;
+
+  // Nested selectors, short way of saying .navbar__top .navbar__item--pipe-after, etc
+  a {
+    padding: 0 10px;
+
+    // a:last-child, used for symmetry with phone number true to PS design
+    &:last-child {
+      padding-right: 20px;
+    }
+  }
+
+  .navbar__item--pipe-after {
+    line-height: 16px; // Anything less than 16px causes anchor to raise above others
+  }
+
+  .fa-shopping-basket {
+    margin-right: 6px;
+  }
+
+}
+
+.navbar__logo {
+  height: 55px;
+}
+
+.navbar__phone-number {
+  margin-left: 10px;
+  color: $orange;
+  font-weight: 600;
+}
+
+.navbar__item--pipe-after {
+  border-right-style: solid;
+  border-right-color: black;
+  border-right-width: 1px;
+  line-height: 13px;
+}
+
+.navbar__item-cart-total, .navbar__item-cart-quantity {
+  font-weight: bold;
+}
+
+// End of navbar code
+
+
+
+// Side navigation code starts
+@media (max-width: 1005px) {
+
+  .navbar__center, .navbar__top {
+    display: none;
+  }
+
+  .navbar__right .navbar__contact-details {
+    display: none;
+  }
+
+  .sidenav {
+    position: fixed;
+    display: block;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    width: 260px;
+    background-color: $light-grey;
+    transform: translate3d(-260px, 0, 0);
+    transition: transform 0.4s ease;
+  }
+
+  .sidenav--active .sidenav {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .navbar__collapse-btn-wrapper {
+    height: 50px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+
+    .sidenav__toggle-btn {
+      font-size: 0.7em;
+    }
+
+  }
+
+  .navbar__btn-wrapper {
+    height: 50px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+
+    .sidenav__toggle-btn {
+      font-size: 0.6em;
+    }
+
+  }
+
+  .navbar__right {
+    .navbar__btn-wrapper:first-of-type {
+      margin-right: 20px;
+    }
+  }
+
+  .container {
+    transition: transform 0.4s ease;
+  }
+
+  .sidenav--active .container {
+    transform: translate3d(260px, 0, 0);
+  }
+
+  .sidenav__section:first-child {
+    padding: 20px;
+    border-bottom: solid 1px $grey;
+  }
+
+  .sidenav__section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: solid 1px $grey;
+    text-transform: uppercase;
+  }
+
+  .sidenav__text--smaller {
+    font-size: 0.8em;
+    text-transform: none;
+  }
+
+  .sidenav__section--centered {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .sidenav__search {
+    width: 88%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .sidenav__link {
+    text-decoration: none;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .sidenav__toggle-btn {
+    position: absolute;
+    align-self: flex-end;
+  }
+
+  .sidenav__toggle-icon {
+    position: absolute;
+    align-self: flex-start;
+
+    .fa-bars, .fa-times {
+      font-size: 2.3em;
+    }
+
+    .fa-search, .fa-shopping-basket {
+      font-size: 2em;
+    }
+
+  }
+
+}

@@ -1,0 +1,147 @@
+.news {
+  grid-area: news;
+  background-color: $light-grey;
+}
+
+.news-grid {
+	display: grid;
+	background-color: $light-grey;
+	grid-template-columns: 1fr 1fr;
+	border-bottom: white 3px solid;
+	padding-bottom: 25px;
+	max-width: $container-width;
+	margin: 15px auto;
+	margin-bottom: 3em;
+	grid-column-gap: 20px;
+	grid-template-areas:
+		"news__latest-news news__other-news"
+		"news__latest-news news__other-news"
+}
+
+.news__latest-news {
+	grid-area: news__latest-news;
+	background-color: white;
+	padding: 20px 38px 20px 38px;
+
+	.news__header {
+		font-size: 1.3em;
+		padding-bottom: 20px;
+		border-bottom: 1px $light-grey solid;
+		margin-bottom: 22px;
+	}
+
+	.news__more-info {
+		font-size: 0.8em;
+		color: $black;
+	}
+
+}
+
+.news__news-snippet {
+	font-size: 0.8em;
+	padding-right: 40px;
+}
+
+
+
+.news__header-secondary {
+	font-weight: normal;
+	font-size: 1.05em;
+	margin: 0;
+}
+
+.news__other-news {
+	grid-area: news__other-news;
+	background-color: $blue;
+	padding: 20px 0px 0px 38px;
+	color: white;
+
+	.news__header {
+		font-size: 1.3em;
+		padding-bottom: 20px;
+		margin-bottom: 10px;
+	}
+
+	.news__more-info {
+		font-size: 1em;
+		color: white;
+		margin-top: 30px;
+		font-style: italic;
+	}
+
+	.news__magento-image {
+		grid-area: magento-image;
+	}
+
+	.news__other-news-section {
+		display: grid;
+		max-width: 70%;
+		margin: 0 auto;
+		grid-template-columns: 35% 1fr;
+		grid-template-areas:
+			"magento-image news-snippet"
+	}
+
+	.news__news-snippet {
+		font-size: 0.8em;
+		padding-right: 40px;
+		width: 90%;
+		grid-area: news-snippet;
+	}
+
+	.news__btn-container {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.news__btn-arrow {
+		color: orange;
+		background-color: white;
+		padding: 10px 15px 10px 15px;
+		margin-bottom: 0;
+		font-size: 1.2em;
+		font-weight: bold;
+
+		&:first-child {
+			margin-right: 2px;
+		}
+
+	}
+
+}
+
+
+// Media qs
+@media (max-width: 900px) {
+
+	.news-grid {
+		grid-template-columns: 1fr;
+		border-bottom: white 3px solid;
+		padding-bottom: 25px;
+		margin: 15px auto;
+		margin-bottom: 2.5em;
+		grid-column-gap: 20px;
+		grid-template-areas:
+			"news__latest-news"
+			"news__other-news"
+	}
+
+	.news__latest-news {
+		padding-bottom: 30px;
+		margin-bottom: 20px;
+	}
+	
+	.news__other-news {
+
+		.news__other-news-section {
+			margin: 0 0;
+			max-width: 90%;
+		}
+
+		.news__btn-container {
+			padding-right: 20px;
+		}
+
+	}
+
+}

@@ -1,7 +1,63 @@
 @import "helpers/variables.scss";
 @import "helpers/mixins.scss";
 @import "layouts/grid.scss";
+@import "layouts/navigation.scss";
 @import "layouts/header.scss";
+@import "layouts/start-order.scss";
+@import "layouts/features.scss";
+@import "layouts/applications.scss";
+@import "layouts/portfolio.scss";
+@import "layouts/products.scss";
+@import "layouts/news.scss";
 @import "layouts/footer.scss";
 @import "components/buttons.scss";
 @import "pages/home.scss";
+
+html {
+	overflow-x: hidden; // Remove horizontal scroll, don't think this has broken anything
+}
+
+body {
+  margin: 0;
+  font-family: $primary-font;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.section__header {
+	padding-top: 1.5em;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.section__follow-up-text {
+	margin-top: 10px;
+	font-size: 0.9em;
+}
+
+.section__header, .section__follow-up-text {
+	text-align: center;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 21px;
+	height: 21px;
+	border: $grey 2px solid;
+	margin-right: 5px;
+}
+
+.circle--active {
+	background-color: $orange;
+}
+

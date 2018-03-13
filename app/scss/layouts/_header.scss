@@ -1,0 +1,283 @@
+.header {
+  grid-area: header;
+  background-color: $blue;
+  border-bottom: 3.4px solid $orange;
+  color: white;
+  text-align: center;
+}
+
+.header-grid {
+	display: grid;
+	grid-template-columns: 20% 1fr 20%;
+	grid-template-areas:
+		"header__left-content header__main-content header__right-content";
+	background-color: $blue;
+}
+
+.header__left-content {
+	align-self: flex-end;
+  	justify-self: flex-start;
+  	grid-area: header__left-content;
+}
+
+.header__right-content {
+	align-self: center;
+	justify-self: center;
+	grid-area: header__right-content;
+}
+
+.header__main-content {
+	grid-area: header__main-content;
+}
+
+.header__title {
+	font-size: 3em;
+	font-weight: normal;
+	padding-top: 1em;
+	margin-bottom: 0;
+}
+
+.header__follow-up-text {
+	margin-top: 20px;
+	font-size: 1.4em;
+	font-family: serif;
+}
+
+.header__case-study-link--no-ul { // no ul = no underline
+	text-decoration: none;
+	color: white;
+	font-size: 0.8em;
+}
+
+.header__case-study-link {
+	color: white;
+	font-size: 0.8em;
+}
+
+.header__case-study-text {
+	text-align: left;
+	padding-left: 2.8em;
+	margin-bottom: 0;
+	margin-top: 15px;
+}
+
+.header__case-study-text--last {
+	text-align: left;
+	padding-left: 2.8em;
+	margin-bottom: 30px;
+	margin-top: 0px;
+}
+
+.header__main-image {
+	max-width: 400px;
+}
+
+.header__btn-container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.header__btn-arrow {
+	color: orange;
+	background-color: white;
+	padding: 10px 15px 10px 15px;
+	margin-bottom: 2px;
+	font-size: 1.2em;
+	font-weight: bold;
+
+	&:first-child {
+		margin-right: 2px;
+	}
+
+}
+
+.header__scruffs-logo {
+	max-height: 80px;
+	padding-left: 2em;
+}
+
+.header__magento-partner {
+	max-height: 170px;
+	padding-right: 2em;
+}
+
+.header__magento-partner--top-right {
+	max-height: 170px;
+	display: none;
+}
+
+.header__slider-options {
+  	display: none;
+}
+
+.header__circle {
+	border-radius: 50%;
+	width: 21px;
+	height: 21px;
+	border: $grey 2px solid;
+	margin-right: 5px;
+}
+
+.header--alt {
+  grid-area: header--alt;
+  background-color: white;
+  color: black;
+  text-align: center;
+  display: none;
+}
+
+
+// Media queries
+@media (max-width: 900px) {
+
+	.header--alt {
+		display: block;
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-bottom: 30px;
+
+		.header__title {
+			display: inline-block;
+			font-size: 2em;
+		}
+
+		.header__follow-up-text {
+			display: inline-block;
+			font-size: 1.1em;
+		}
+	}
+
+	.header__right-content {
+		display: none;
+	}
+
+	.header__main-content {
+		padding-bottom: 35px;
+	}
+
+	.header__main-image {
+		max-width: 400px;
+		max-height: 300px;
+		margin-top: 100px;
+	}
+
+	.header__scruffs-logo {
+		max-height: 60px;
+		padding-left: 2em;
+		margin-bottom: 30px;
+	}
+
+	.header__magento-partner--top-right {
+		display: inline;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-top: 30px;
+		max-height: 140px;
+		margin-right: 20px;
+	}
+
+	.header__responsive-image-wrapper {
+		display: flex;
+		justify-content: center;
+		position: relative;
+	}
+
+	.header__case-study-text, .header__case-study-text--last {
+		display: none;
+	}
+	
+	.header__title {
+		display: none;
+	}
+
+	.header__follow-up-text {
+		display: none;
+	}
+
+	.header-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"header__main-content header__main-content"
+			"header__left-content header__left-content";
+		background-color: $blue;
+	}
+
+	.header__btn-container {
+		display: none;
+	}
+
+	.header__left-content {
+		width: 100%;
+		display: flex;
+	}
+
+	.header__slider-options {
+		display: flex;
+		margin-left: 20%;
+	}
+
+}
+
+@media (max-width: 470px) {
+
+	.header__circle {
+		border-radius: 50%;
+		width: 17px;
+		height: 17px;
+		border: $grey 1.5px solid;
+		margin-right: 5px;
+	}
+
+	.header__main-image {
+		max-width: 300px;
+		max-height: 200px;
+	}
+
+	.header__slider-options {
+		margin-left: 15%;
+	}
+
+	.header__magento-partner--top-right {
+		margin-top: 30px;
+		max-height: 100px;
+		margin-right: 20px;
+	}
+
+	.header__scruffs-logo {
+		max-height: 40px;
+	}
+
+	.header--alt {
+		padding: 0px 20px;
+		.header__title {
+			display: inline-block;
+			font-size: 1.6em;
+		}
+
+		.header__follow-up-text {
+			display: inline-block;
+			font-size: 1em;
+			padding-bottom: 20px;
+		}
+	}
+
+}
+
+@media (max-width: 333px) {
+	
+	.header__main-image {
+		max-width: 275px;
+		max-height: 175px;
+	}
+
+	.header__slider-options {
+		margin-left: 10%;
+	}
+
+	.header--alt {
+		padding-bottom: 0px;
+	}
+
+}
