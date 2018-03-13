@@ -85,7 +85,7 @@
 	.news__news-snippet {
 		font-size: 0.8em;
 		padding-right: 40px;
-		width: 100%;
+		width: 90%;
 		grid-area: news-snippet;
 	}
 
@@ -104,6 +104,42 @@
 
 		&:first-child {
 			margin-right: 2px;
+		}
+
+	}
+
+}
+
+
+// Media qs
+@media (max-width: 900px) {
+
+	.news-grid {
+		grid-template-columns: 1fr;
+		border-bottom: white 3px solid;
+		padding-bottom: 25px;
+		margin: 15px auto;
+		margin-bottom: 2.5em;
+		grid-column-gap: 20px;
+		grid-template-areas:
+			"news__latest-news"
+			"news__other-news"
+	}
+
+	.news__latest-news {
+		padding-bottom: 30px;
+		margin-bottom: 20px;
+	}
+	
+	.news__other-news {
+
+		.news__other-news-section {
+			margin: 0 0;
+			max-width: 90%;
+		}
+
+		.news__btn-container {
+			padding-right: 20px;
 		}
 
 	}

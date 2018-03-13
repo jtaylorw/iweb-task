@@ -1,3 +1,4 @@
+// Desktop portfolio CSS
 .portfolio {
   grid-area: portfolio;
   background-color: $light-grey;
@@ -7,7 +8,7 @@
 	display: grid;
 	background-color: blue;
 	grid-template-columns: 1fr 1fr 1fr;
-	height: 700px;
+	min-height: 700px;
 	max-width: $container-width;
 	margin: 0 auto;
 	margin-top: 3.5em;
@@ -65,4 +66,116 @@
 	font-size: 0.8em;
 	margin-top: 5px;
 	margin-bottom: 25px;
+}
+
+
+
+// Portfolio mobile CSS
+@media (min-width: 901px) {
+
+	.portfolio-grid--mobile {
+		display: none;
+	}
+
+}
+
+@media (max-width: 900px) {
+
+	.portfolio .section__follow-up-text {
+		padding-bottom: 30px;
+		margin-top: 0;
+	}
+
+	.portfolio-grid {
+	  display: none;
+	}
+
+	.portfolio-grid--mobile {
+
+		display: grid;
+		background-color: white;
+
+		.portfolio-grid__title, .portfolio-grid__text, .cta-button--orange {
+			justify-self: center;
+			align-self: center;
+			text-align: center;
+		}
+
+		.portfolio-grid__text {
+			padding: 10px 20px 0px 20px;
+		}
+
+		.portfolio-grid__wrapper {
+			display: grid;
+			margin-top: 40px;
+			padding: 0 20px;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas:
+				"bhf-section--mobile my-memory-section--mobile"
+				"bhf-text-section--mobile my-memory-text-section--mobile";
+		}
+
+		.portfolio-grid__bhf-text-area--mobile, .portfolio-grid__my-memory-text-area--mobile {
+			justify-content: flex-start;
+			align-content: flex-start;
+			text-align: left;
+			padding: 20px 40px 10px 10px;
+			margin-bottom: 20px;
+			position: relative;
+
+			.portfolio-grid__text {
+				text-align: left;
+				padding: 0 0 20px 0;
+			}
+
+			.cta-button--orange {
+				padding: 10px 15px;
+				font-size: 0.8em;
+				position: absolute;
+				bottom: 0;
+			}
+
+			.portfolio-grid__title--smaller {
+				font-size: 1.2em;
+			}
+
+		}
+
+	}
+
+	.portfolio-grid__raleigh-image--mobile {
+		background-image: url(https://www.iweb.co.uk/wp-content/uploads/2017/05/ralieghcover-833x1000.jpg);
+		background-size: 100%;
+		height: 200px;
+		margin-bottom: 40px;
+	}
+
+	.portfolio-grid__bhf--mobile {
+		grid-area: bhf-section--mobile;
+		background-image: url(https://www.iweb.co.uk/wp-content/uploads/2016/05/bhfcover-2.jpg);
+		background-size: 100%;
+		min-height: 160px;
+	}
+
+	.portfolio-grid__my-memory--mobile {
+		grid-area: my-memory-section--mobile;
+		background-color: green;
+	}
+
+	.portfolio-grid__bhf-text-area--mobile {
+		grid-area: bhf-text-section--mobile;
+	}
+
+	.portfolio-grid__my-memory-text-area--mobile {
+		grid-area: my-memory-text-section--mobile;
+	}
+
+}
+
+@media (max-width: 649px) {
+
+	.portfolio-grid--mobile__raleigh-image {
+		
+	}
+
 }

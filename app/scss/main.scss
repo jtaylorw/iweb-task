@@ -1,6 +1,7 @@
 @import "helpers/variables.scss";
 @import "helpers/mixins.scss";
 @import "layouts/grid.scss";
+@import "layouts/navigation.scss";
 @import "layouts/header.scss";
 @import "layouts/start-order.scss";
 @import "layouts/features.scss";
@@ -12,6 +13,10 @@
 @import "components/buttons.scss";
 @import "pages/home.scss";
 
+html {
+	overflow-x: hidden; // Remove horizontal scroll, don't think this has broken anything
+}
+
 body {
   margin: 0;
   font-family: $primary-font;
@@ -19,6 +24,10 @@ body {
 
 .uppercase {
 	text-transform: uppercase;
+}
+
+.underline {
+	text-decoration: underline;
 }
 
 .bold {
@@ -51,3 +60,4 @@ body {
 .circle--active {
 	background-color: $orange;
 }
+

@@ -4,6 +4,7 @@
   grid-template-areas:
     "navbar navbar navbar navbar"
     "header header header header"
+    "header--alt header--alt header--alt header--alt"
     "start-order start-order start-order start-order"
     "features features features features"
     "applications applications applications applications"
@@ -13,14 +14,15 @@
     "footer footer footer footer"
 }
 
-// Screens smaller than 980px...
-@media (max-width: 980px) {
+// Screens smaller than 900px...
+@media (max-width: 900px) {
   .container {
     grid-template-areas: 
       "navbar navbar"
       "header header"
-      "start-order start-order"
+      "header--alt header--alt"
       "features features"
+      "start-order start-order"
       "applications applications"
       "portfolio portfolio"
       "products products"
@@ -35,8 +37,9 @@
     grid-template-areas:
       "navbar"
       "header"
-      "start-order"
+      "header--alt"
       "features"
+      "start-order"
       "applications"
       "portfolio"
       "products"
